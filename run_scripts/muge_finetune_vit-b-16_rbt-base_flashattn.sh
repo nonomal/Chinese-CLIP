@@ -82,4 +82,5 @@ python3 -m torch.distributed.launch --use_env --nproc_per_node=${GPUS_PER_NODE} 
           --max-epochs=${max_epochs} \
           --vision-model=${vision_model} \
           ${use_augment} \
-          --text-model=${text_model}
+          --text-model=${text_model} \
+          --use-flash-attention  # activate FlashAttention
